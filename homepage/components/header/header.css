@@ -1,0 +1,18 @@
+/* HEADER: fixed logo (wordmark -> mini shield on scroll) + nav. Uses a difference blend so it works on any background. */
+header{display:flex;justify-content:space-between;align-items:center;gap:16px;position:fixed;z-index:6;top:clamp(20px,2.8vw,54px);left:clamp(20px,4.2vw,80px);right:clamp(20px,4.2vw,80px);color:var(--fg)}
+.logo{position:relative;height:44px;display:flex;align-items:center;color:inherit;text-decoration:none}
+nav{display:flex;align-items:center;gap:clamp(12px,2.5vw,36px);font-size:clamp(13px,1.1vw,16px)}
+nav a{color:var(--fg);text-decoration:none}
+.pill{border:1px solid var(--line);border-radius:999px;padding:.7em 1.3em;transition:background .25s,color .25s}
+.pill:hover,.pill:focus-visible{background:var(--fg);color:#000}
+.mini{display:block;height:44px;width:auto;color:var(--fg)}
+/* header sits at page level and uses a difference blend: white on dark areas, black on white, and tinted over coloured cards */
+header{mix-blend-mode:difference;color:#fff;--fg:#fff;--line:#fff}
+header .pill:hover,header .pill:focus-visible{background:#fff;color:#000!important}
+
+body.light .pill:hover{color:#fff}
+body.dark .pill:hover{color:#000}
+@media (max-width:640px){nav a:not(.pill){display:none}}
+
+/* star under the W turns clockwise as the page scrolls (angle set in js/main.js) */
+.mini .star{transform-box:fill-box;transform-origin:center}

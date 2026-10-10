@@ -1,0 +1,30 @@
+/* WORK: dark section with a looping "Our work" marquee and three project cards. */
+.work{position:relative;z-index:1;background:#161616;color:#fff;padding:clamp(100px,18vh,200px) clamp(20px,4.4vw,85px) clamp(100px,18vh,200px);overflow:hidden}
+.work .eyebrow{color:#fff}
+.work .eyebrow::before{background:#fff}
+.marquee{margin:clamp(40px,8vh,90px) calc(clamp(20px,4.4vw,85px) * -1) 0;overflow:hidden;white-space:nowrap}
+.track{display:flex;width:max-content;animation:mq 26s linear infinite}
+.marquee:hover .track{animation-play-state:paused}
+.mq{display:flex;align-items:center;font-size:clamp(80px,13vw,260px);line-height:1.25;font-weight:400;letter-spacing:-.045em}
+.mq span{display:flex;align-items:center;margin-right:.42em}
+.mq svg{width:.5em;height:.5em;margin-left:.42em;flex:none}
+@keyframes mq{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.track{animation:none}}
+
+/* project grid: 3 columns, different image heights = staggered look */
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(12px,1.3vw,25px);margin-top:clamp(40px,8vh,100px);align-items:start}
+.col{display:flex;flex-direction:column;gap:clamp(40px,6.5vw,125px)}
+.proj{display:block;color:#fff;text-decoration:none}
+.ph{width:100%;border-radius:14px;overflow:hidden;position:relative}
+.ph i{position:absolute;inset:0;transition:transform .7s cubic-bezier(.22,1,.36,1)}
+.proj:hover .ph i,.proj:focus-visible .ph i{transform:scale(1.04)}
+/* pointer enters the Work section: every project (image + text) dims into the dark background;
+   the project under the pointer lights up. Only on devices that can hover, so touch screens never dim anything. */
+.proj{transition:opacity .45s ease}
+@media (hover:hover){.work:hover .proj{opacity:.22}.work:hover .proj:hover,.work .proj:focus-visible{opacity:1}}
+.proj h3{margin:clamp(14px,1.4vw,26px) 0 0;font-weight:400;font-size:clamp(20px,1.7vw,34px);letter-spacing:-.03em;line-height:1.15}
+.proj p{margin:.15em 0 0;font-size:clamp(20px,1.7vw,34px);letter-spacing:-.03em;line-height:1.15;color:#8f8f8f}
+.proj p i{display:inline-block;width:.5em;height:.5em;margin:0 .35em;background:currentColor;clip-path:polygon(50% 0,62% 38%,100% 50%,62% 62%,50% 100%,38% 62%,0 50%,38% 38%)}
+.awards{display:block;width:max-content;margin:clamp(80px,14vh,170px) auto 0;color:#fff;text-decoration:none;font-size:clamp(17px,1.4vw,27px);font-weight:500;border-bottom:1px solid currentColor;padding-bottom:4px;transition:color .3s}
+.awards:hover,.awards:focus-visible{color:#d9f58a;outline:none}
+@media (max-width:760px){.grid{grid-template-columns:1fr}.col{display:contents}}

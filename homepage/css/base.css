@@ -1,0 +1,29 @@
+/* BASE: reset, page background, theme colours, shared helpers used by many components. */
+:root{--fg:#f4f4f6;--line:#3a3a40;--sw:clamp(100px,14.3vw,330px);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*,*::before,*::after{box-sizing:inherit}
+html,body{margin:0}
+body{background:#000;color:var(--fg);font-family:"Hanken Grotesk",system-ui,sans-serif;overflow-x:hidden;transition:color .3s}
+body.light{--fg:#0b0b0b;--line:#c9c9c9}
+/* Base styles = FINAL state. Keyframes only define the starting state. */
+body.dark{--fg:#f4f4f6;--line:#4a4a50}   /* set by js/main.js while over the dark "Our work" section */
+html{scroll-behavior:smooth}
+@keyframes fadeIn{from{opacity:0}}
+.ui{animation:fadeIn 1.1s ease 4.4s backwards}
+a:focus-visible{outline:2px solid #fff;outline-offset:3px}
+.ul{border-bottom:1px solid var(--fg)}
+/* shared: small label with a coloured dot (each section recolours it) */
+.eyebrow{display:flex;align-items:center;gap:12px;margin:0;font-size:13px;font-weight:600;letter-spacing:.02em;text-transform:uppercase}
+.eyebrow::before{content:"";width:10px;height:10px;border-radius:50%;background:#d9f58a}
+
+/* shared: underlined "Read more" link */
+.more{display:inline-block;margin-top:clamp(50px,6vw,110px);color:inherit;text-decoration:none;font-size:clamp(17px,1.4vw,26px);font-weight:500;border-bottom:1px solid #0b0b0b;padding-bottom:4px}
+
+/* shared: hand-drawn circle doodle (used by Awards + Inside) */
+.circ path{fill:none;stroke:#0b0b0b;stroke-linecap:round;stroke-linejoin:round}
+.circ{position:relative;display:inline-block;white-space:nowrap}
+.circ svg{position:absolute;left:-7%;top:-20%;width:113%;height:140%;overflow:visible;pointer-events:none}
+.circ path{stroke-width:2.1;vector-effect:non-scaling-stroke;opacity:.92}
+.circ path.g{stroke-width:1.1;opacity:.55}
+
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important}}

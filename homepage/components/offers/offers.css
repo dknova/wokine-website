@@ -1,0 +1,25 @@
+/* OFFERS: two large rounded cards (training program + content studio). */
+.offers{position:relative;z-index:1;background:#fff;color:#fff;display:grid;grid-template-columns:1fr 1fr;gap:clamp(12px,1.6vw,30px);padding:clamp(60px,6vw,110px) clamp(20px,4.4vw,85px)}
+.offer{position:relative;overflow:hidden;isolation:isolate;display:flex;flex-direction:column;height:clamp(520px,72vh,780px);padding:clamp(60px,5.2vw,100px) clamp(24px,4vw,77px) clamp(60px,8.5vw,170px);border-radius:18px}
+.offer .eyebrow{color:#fff}
+.offer .eyebrow::before{background:#fff;width:10px;height:10px}
+.offer h3{margin:clamp(24px,2.2vw,42px) 0 0;max-width:11.5em;font-weight:500;font-size:clamp(30px,4.2vw,84px);line-height:1.02;letter-spacing:-.04em}
+.offer a.cta{align-self:flex-start;margin-top:auto;color:#fff;text-decoration:none;font-size:clamp(16px,1.4vw,27px);font-weight:500;border-bottom:1px solid currentColor;padding-bottom:4px;transition:color .3s ease}
+.offer a.cta:hover,.offer a.cta:focus-visible{color:#d9f58a;outline:none}
+
+/* left: warm gradient + thin geometric lines */
+.training{background:
+  radial-gradient(ellipse 55% 50% at 80% 18%,rgba(132,118,140,.95),transparent 72%),
+  radial-gradient(ellipse 70% 60% at 0% 100%,#8a4a1f,transparent 70%),
+  linear-gradient(160deg,#75301f,#82411f 60%,#7a4423)}
+.training::before{content:"";position:absolute;z-index:-1;width:75%;aspect-ratio:1;right:-28%;bottom:-48%;border:1px solid rgba(255,255,255,.16);border-radius:50%}
+.training::after{content:"";position:absolute;z-index:-1;width:26%;height:30%;right:0;bottom:0;border-top:1px solid rgba(255,255,255,.16);border-left:1px solid rgba(255,255,255,.16)}
+
+/* right: dark studio feel. To use a real photo: add  url(../assets/studio.jpg) center/cover  as the first background layer */
+.studio{background:
+  linear-gradient(180deg,rgba(0,0,0,.35),transparent 45%,rgba(0,0,0,.25)),
+  radial-gradient(ellipse 45% 38% at 88% 8%,rgba(110,230,150,.28),transparent 70%),
+  radial-gradient(ellipse 80% 38% at 50% 100%,rgba(170,95,45,.6),transparent 72%),
+  linear-gradient(180deg,#0a0c0a,#16211a 50%,#2a1d14)}
+
+@media (max-width:760px){.offers{grid-template-columns:1fr}.offer{height:auto;min-height:440px;padding-bottom:60px}.offer a.cta{margin-top:40px}}

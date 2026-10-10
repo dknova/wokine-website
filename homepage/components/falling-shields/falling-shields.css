@@ -1,0 +1,6 @@
+/* FALLING GOLD SHIELDS: copies of the gold shield drop from the top of the screen over "Hello, again." (falling-shields.js) */
+.rain{position:fixed;inset:0;z-index:3;pointer-events:none;overflow:hidden;perspective:900px}
+.rain .fs{position:absolute;top:0;left:0;transform-style:preserve-3d;will-change:transform;filter:drop-shadow(0 10px 14px rgba(120,90,10,.28))}
+.rain .fs svg{display:block;width:100%;height:100%;overflow:visible}
+/* the copies are created later than the page, so the "fade in after the intro" animations of the rim must not hide them */
+.rain .metal,.rain .bev{animation:none}

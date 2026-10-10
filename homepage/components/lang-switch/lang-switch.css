@@ -1,0 +1,7 @@
+/* LANGUAGE SWITCH: EN / FR, top right. */
+.lang{position:fixed;z-index:6;top:1.4vw;right:1.8vw;display:flex;gap:4px;font-size:12px;color:#8a8a92}
+.lang span{padding:6px 10px;border-radius:99px}
+.lang .on{background:#000;color:#fff}
+
+body.light .lang .on{background:#eee;color:#000}
+body.dark .lang .on{background:#000;color:#fff}

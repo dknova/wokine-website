@@ -1,0 +1,9 @@
+/* BACKGROUND: fixed wall of shields behind everything + white wash that fades in during the showreel.
+   background.js builds the shields and tilts them toward the mouse. */
+.bg{position:fixed;inset:0;background:#141414;overflow:hidden;animation:fadeIn 1.4s ease 3.9s backwards}
+.bg .sheet{position:absolute;width:0;height:0}
+.shields{position:absolute;inset:0}
+.bs{position:absolute;width:120px;height:144px;margin:-72px 0 0 -60px;transform-style:preserve-3d;will-change:transform}
+.bs svg{position:absolute;inset:0;width:100%;height:100%;display:block;overflow:visible}
+.bs .back{transform:translateZ(-16px)}
+.wash{position:fixed;inset:0;background:#fff;opacity:0}

@@ -1,0 +1,30 @@
+/* INSIDE: giant sliding "Inside us" text behind two tilted cards (startup studio + extranet). Tilt is set by js/main.js (--t). */
+.inside{position:relative;z-index:2;background:#fff;overflow:hidden;border-radius:0 0 28px 28px;padding:clamp(260px,60vh,640px) clamp(16px,2.3vw,44px) clamp(24px,4.2vh,60px)}
+.bgrows{position:absolute;top:3%;left:-10%;right:-10%;display:flex;flex-direction:column;justify-content:flex-start;gap:clamp(10px,2vw,40px);transform:rotate(-3deg);pointer-events:none;z-index:0}
+.bgrow{display:flex;width:max-content;font-size:clamp(90px,15vw,300px);font-weight:400;letter-spacing:-.05em;line-height:1.1;color:#ececec;white-space:nowrap;will-change:transform}   /* slides on scroll only - see inside.js */
+.bgrow span{display:flex;align-items:center}
+.bgrow svg{width:.42em;height:.42em;margin:0 .45em;flex:none}
+/* at the start (t=1) the cards are narrower with a wide gap; as you scroll (t->0) the gap closes and they widen */
+.duo{position:relative;z-index:1;display:grid;grid-template-columns:1fr 1fr;gap:calc(clamp(16px,2.1vw,40px) + var(--t,0) * 9vw);padding-inline:calc(var(--t,0) * 2.4vw);max-width:100%}
+.panel2{position:relative;overflow:hidden;min-height:clamp(560px,92vh,980px);border-radius:20px;color:#fff;padding:clamp(70px,5.8vw,112px) clamp(24px,3.4vw,66px) clamp(40px,4vw,80px);display:flex;flex-direction:column;will-change:transform}
+.panel2 .eyebrow{color:#fff}
+.panel2 .eyebrow::before{background:#fff}
+.studio2{background:linear-gradient(180deg,#171718 0%,#2b2a2e 40%,#5a4448 75%,#8d6a68 100%);transform:rotate(calc(var(--t,0) * -2.2deg)) translateY(calc(var(--t,0) * 30px))}
+.extra{background:#6558e8;transform:rotate(calc(var(--t,0) * 2.4deg)) translateY(calc(var(--t,0) * 90px))}
+.panel2 p.big{margin:clamp(36px,4.5vw,86px) 0 0;max-width:15em;font-weight:500;font-size:clamp(22px,1.85vw,38px);line-height:1.1;letter-spacing:-.03em;position:relative;z-index:1}
+.extra p.big{max-width:17em}
+.panel2 a.go{align-self:flex-start;margin-top:clamp(40px,4.6vw,90px);color:#fff;text-decoration:none;font-size:clamp(17px,1.4vw,27px);font-weight:500;border-bottom:1px solid currentColor;padding-bottom:3px;position:relative;z-index:1;transition:color .3s}
+.panel2 a.go:hover,.panel2 a.go:focus-visible{color:#d9f58a;outline:none}
+.inside .circ path{stroke:#fff;fill:none}
+.ghost{position:absolute;inset:0;pointer-events:none;color:rgba(20,10,110,.13);font-size:clamp(60px,8.6vw,170px);font-weight:500;letter-spacing:-.05em;line-height:1;white-space:nowrap}
+.ghost span{position:absolute}
+.ui-card{position:absolute;left:77%;top:36%;width:42%;height:82%;background:#f6f6f6;border-radius:22px;padding:clamp(16px,1.8vw,34px);color:#161616;transform-origin:0 0;transform:rotate(-8deg);box-shadow:0 20px 60px rgba(30,20,120,.25);z-index:1}
+.ui-top{display:flex;align-items:center;gap:10px;font-weight:600;font-size:clamp(16px,1.5vw,28px);letter-spacing:-.03em;margin-bottom:clamp(40px,7.5vw,150px)}
+.ui-top svg{width:1.3em;height:1.5em}
+.ui-top em{font-style:normal;font-size:.5em;background:#6558e8;color:#fff;border-radius:99px;padding:.2em .7em}
+.ui-card ul{list-style:none;margin:0;padding:0}
+.ui-card li{display:flex;align-items:center;gap:.7em;font-size:clamp(15px,1.4vw,27px);font-weight:600;padding:.55em .7em;border-radius:12px;letter-spacing:-.02em}
+.ui-card li i{width:1em;height:1em;border:2px solid currentColor;border-radius:.28em;flex:none}
+.ui-card li.on{background:#e9e8f7;color:#5648d9}
+@media (max-width:860px){.duo{grid-template-columns:1fr;gap:16px;padding-inline:0}.panel2{min-height:560px}.ui-card{left:55%;width:60%}}
+@media (prefers-reduced-motion:reduce){.studio2,.extra{transform:none}}

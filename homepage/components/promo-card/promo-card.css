@@ -1,0 +1,6 @@
+/* PROMO CARD: small "NEW - We're opening a new office" card, bottom right of the hero. */
+.card{position:absolute;right:4.4vw;bottom:clamp(70px,14vh,150px);width:clamp(180px,16vw,310px);aspect-ratio:1.39;border-radius:14px;overflow:hidden;background:linear-gradient(180deg,#6d8798,#46606f 35%,#243640 70%,#16222a);padding:16px;display:flex;flex-direction:column;justify-content:space-between;font-size:clamp(16px,1.7vw,32px);line-height:1.1;font-weight:500}
+.card b{align-self:flex-start;display:flex;gap:8px;align-items:center;font-size:12px;font-weight:600;background:#d6f26b;color:#000;border-radius:99px;padding:.5em 1em}
+.card b::before{content:"";width:9px;height:9px;border-radius:50%;background:#000}
+.card i{position:absolute;top:12px;right:16px;font-style:normal;font-size:24px;line-height:1}
+@media (max-width:760px){.card{display:none}}

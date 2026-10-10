@@ -1,0 +1,63 @@
+/* HERO VARIANTS: three looks for the first screen, chosen at random in hero-variants.js.
+   Every refresh starts with the SAME dark intro animation (the default styles in hero.css / background.css).
+   Once the intro is over, js adds  html.revealed  and the page fades into  html[data-variant="silver|gold|lime"].
+   Only the first screen changes: background, text colour, shield. */
+
+/* ---------- smooth fade between the intro look and the chosen look ---------- */
+.bg{transition:background-color 1.2s ease}
+.bg svg{transition:opacity 1.2s ease}
+.face{transition:fill 1.2s ease}
+.metal{transition:stroke-width 1.2s ease}
+.mark path{stroke:transparent;stroke-width:0;transition:stroke 1.2s ease,stroke-width 1.2s ease}
+.shield svg{filter:drop-shadow(0 10px 12px rgba(120,160,0,0));transition:filter 1.2s ease}
+linearGradient stop{transition:stop-color 1.2s ease}
+html.revealing body{transition:color 1s ease}
+
+/* ---------- silver: the intro look itself -> nothing to change ---------- */
+
+/* ---------- gold: white page, gold shield + a small floating shield ---------- */
+html.revealed[data-variant="gold"]{--mt0:#fff6b8;--mt1:#8c5d0a;--mt2:#d8a52c;--mt3:#fbe58f;--mt4:#fffbd8;--mt5:#f3cf5c;--wg0:#fffbd0;--wgm:#f6dc70;--wg1:#d3a22e}   /* METALLIC GOLD: bright highlights next to deep amber shadows */
+html.revealed[data-variant="gold"] .bg{background-color:#fff}
+html.revealed[data-variant="gold"] .bg svg{opacity:0}
+html.revealed[data-variant="gold"] body:not(.light):not(.dark){--fg:#0b0b0b;--line:#c9c9c9}
+html.revealed[data-variant="gold"] .face{fill:url(#gf)}
+html.revealed[data-variant="gold"] .mark path{stroke:#6e470a;stroke-width:3.5;stroke-linejoin:round}
+html.revealed[data-variant="gold"] .shield2{opacity:1;visibility:visible}
+
+/* ---------- lime: light grey page, glossy inflated lime shield ---------- */
+html.revealed[data-variant="lime"]{--mt0:#ecfab0;--mt1:#c6ee33;--mt2:#9bd000;--mt3:#dcf66f;--wg0:#e6f994;--wg1:#b9e61c;--mt4:#f5ffc0;--mt5:#d9f56a;--wgm:#cdee5a}
+html.revealed[data-variant="lime"] .bg{background-color:#ebebeb}
+html.revealed[data-variant="lime"] .bg svg{opacity:0}
+html.revealed[data-variant="lime"] body:not(.light):not(.dark){--fg:#161616;--line:#c9c9c9}
+html.revealed[data-variant="lime"] .face{fill:transparent}
+html.revealed[data-variant="lime"] .metal{stroke-width:36}
+html.revealed[data-variant="lime"] .mark path{stroke:#a6d800;stroke-width:16;stroke-linejoin:round;paint-order:stroke}
+html.revealed[data-variant="lime"] .shield svg{filter:drop-shadow(0 10px 12px rgba(120,160,0,.30))}
+
+/* small floating shield (appears only in the gold look) */
+.shield2{position:absolute;z-index:1;left:calc(var(--sw)*-.84);top:calc(var(--sw)*-.48);width:calc(var(--sw)*.47);
+  transform:rotate(-14deg);opacity:0;visibility:hidden;transition:opacity 1s ease .3s}
+.shield2 svg{display:block;width:100%;height:auto;overflow:visible;filter:drop-shadow(0 6px 8px rgba(150,120,20,.25));animation:float2 7s ease-in-out 5s infinite}
+@keyframes float2{50%{transform:translateY(-10px) rotate(3deg)}}
+@media (max-width:640px){.shield2{display:none!important}}
+@media (prefers-reduced-motion:reduce){.bg,.bg svg,.face,.metal,.mark path,.shield svg,.shield2,linearGradient stop{transition:none!important}}
+
+
+/* ==================== GOLD SWING INTRO (?intro=gold; html[data-intro="gold"]) ====================
+   White page from the very first frame, gold shield already in the middle of "Hello, ... again." and swinging in 3D
+   (hero.js -> goldSwing). The old dark intro is switched off here; it still runs with  index.html?intro=classic  */
+html[data-intro="gold"] .bg{animation:none;background-color:#fff}
+html[data-intro="gold"] .bg svg{opacity:0}
+html[data-intro="gold"] .slab,html[data-intro="gold"] .prism,html[data-intro="gold"] .shield2{display:none!important}
+html[data-intro="gold"] .slot{animation:none}
+html[data-intro="gold"] .hello,html[data-intro="gold"] .again{animation:fadeIn .7s ease backwards}
+html[data-intro="gold"] .again sup{animation:fadeIn .6s ease .6s backwards}
+html[data-intro="gold"] .metal{animation:none}
+html[data-intro="gold"] .ui{animation:fadeIn .8s ease .3s backwards}
+html[data-intro="gold"] .shield svg{animation:none;filter:none}
+html[data-intro="gold"][data-variant="gold"].revealed .face{fill:url(#gf)}
+html[data-intro="gold"] .shield .depth svg{filter:brightness(.62) saturate(1.3)}
+html[data-intro="gold"] .shield{will-change:transform}
+html[data-intro="gold"] .panel{animation:none;transition:opacity .5s ease}
+html[data-intro="gold"]:not(.moved) .panel{opacity:0}
+html[data-intro="gold"] .bev{animation:none}

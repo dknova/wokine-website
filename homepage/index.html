@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hello, again.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="components/hero-variants/hero-variants.js"></script>
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="components/background/background.css">
+<link rel="stylesheet" href="components/header/header.css">
+<link rel="stylesheet" href="components/hero/hero.css">
+<link rel="stylesheet" href="components/hero-variants/hero-variants.css">
+<link rel="stylesheet" href="components/promo-card/promo-card.css">
+<link rel="stylesheet" href="components/lang-switch/lang-switch.css">
+<link rel="stylesheet" href="components/dock/dock.css">
+<link rel="stylesheet" href="components/tagline-bar/tagline-bar.css">
+<link rel="stylesheet" href="components/showreel/showreel.css">
+<link rel="stylesheet" href="components/expertise/expertise.css">
+<link rel="stylesheet" href="components/offers/offers.css">
+<link rel="stylesheet" href="components/approach/approach.css">
+<link rel="stylesheet" href="components/work/work.css">
+<link rel="stylesheet" href="components/awards/awards.css">
+<link rel="stylesheet" href="components/trust/trust.css">
+<link rel="stylesheet" href="components/inside/inside.css">
+<link rel="stylesheet" href="components/footer/footer.css">
+<link rel="stylesheet" href="components/intro-peek/intro-peek.css">
+<link rel="stylesheet" href="components/falling-shields/falling-shields.css">
+</head>
+<body>
+<div class="bg" aria-hidden="true">
+  <!-- shared artwork (drawn once): the hero shield in black, plus a dark silhouette used as its "thickness" -->
+  <svg class="sheet" xmlns="http://www.w3.org/2000/svg" width="0" height="0"><defs>
+    <linearGradient id="bgMt" x1=".05" y1="0" x2=".95" y2="1"><stop offset="0" stop-color="#2c2c30"/><stop offset=".25" stop-color="#18181a"/><stop offset=".55" stop-color="#0a0a0b"/><stop offset=".8" stop-color="#101014"/><stop offset="1" stop-color="#1c1c20"/></linearGradient>
+    <linearGradient id="bgWg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#26262a"/><stop offset=".55" stop-color="#121214"/><stop offset="1" stop-color="#08080a"/></linearGradient>
+    <linearGradient id="bgHl" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".95"/><stop offset=".55" stop-color="#fff" stop-opacity=".25"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+    <symbol id="bgShieldSym" viewBox="0 0 300 360" overflow="visible">
+      <path d="M150 8C102 8 53.8 23.2 14 50V176C14 268 76 328 150 356C224 328 286 268 286 176V50C246.2 23.2 198 8 150 8Z" fill="#050506"/>
+      <g transform="translate(2.5 3.5)" fill="#050506" opacity=".75"><path d="M86.0 96.0L108.0 96.0L126.6 163.7L150.0 100.1L173.4 163.7L192.0 96.0L214.0 96.0L190.4 182.0L158.1 182.0L150.0 159.9L141.9 182.0L109.6 182.0Z"/><path d="M150 212C153 232 164 246 183 249C164 252 153 266 150 287C147 266 136 252 117 249C136 246 147 232 150 212Z"/></g>
+      <path d="M86.0 96.0L108.0 96.0L126.6 163.7L150.0 100.1L173.4 163.7L192.0 96.0L214.0 96.0L190.4 182.0L158.1 182.0L150.0 159.9L141.9 182.0L109.6 182.0Z" fill="url(#bgWg)"/><path d="M150 212C153 232 164 246 183 249C164 252 153 266 150 287C147 266 136 252 117 249C136 246 147 232 150 212Z" fill="url(#bgWg)"/>
+      <g fill="none" stroke="url(#bgHl)" stroke-width="1.6" stroke-linejoin="round" opacity=".12"><path d="M86.0 96.0L108.0 96.0L126.6 163.7L150.0 100.1L173.4 163.7L192.0 96.0L214.0 96.0L190.4 182.0L158.1 182.0L150.0 159.9L141.9 182.0L109.6 182.0Z"/><path d="M150 212C153 232 164 246 183 249C164 252 153 266 150 287C147 266 136 252 117 249C136 246 147 232 150 212Z"/></g>
+      <path d="M150 8C102 8 53.8 23.2 14 50V176C14 268 76 328 150 356C224 328 286 268 286 176V50C246.2 23.2 198 8 150 8Z" fill="none" stroke="#2a2a2e" stroke-width="19.5" stroke-linejoin="round" opacity=".9"/>
+      <path d="M150 8C102 8 53.8 23.2 14 50V176C14 268 76 328 150 356C224 328 286 268 286 176V50C246.2 23.2 198 8 150 8Z" fill="none" stroke="url(#bgMt)" stroke-width="17" stroke-linejoin="round"/>
+      <path d="M150 8C102 8 53.8 23.2 14 50V176C14 268 76 328 150 356C224 328 286 268 286 176V50C246.2 23.2 198 8 150 8Z" fill="none" stroke="#0b0b0d" stroke-width="2.4" stroke-linejoin="round" opacity=".75" transform="translate(150 182) scale(.94) translate(-150 -182)"/>
+      <path d="M150 8C102 8 53.8 23.2 14 50V176C14 268 76 328 150 356C224 328 286 268 286 176V50C246.2 23.2 198 8 150 8Z" fill="none" stroke="url(#bgHl)" stroke-width="1.3" stroke-linejoin="round" opacity=".1" transform="translate(150 182) scale(.915) translate(-150 -182)"/>
+    </symbol>
+    <symbol id="bgShieldBack" viewBox="0 0 300 360" overflow="visible"><path d="M150 8C102 8 53.8 23.2 14 50V176C14 268 76 328 150 356C224 328 286 268 286 176V50C246.2 23.2 198 8 150 8Z" fill="#08080a" stroke="#242428" stroke-width="19.5" stroke-linejoin="round"/></symbol>
+  </defs></svg>
+  <!-- background.js fills this with one element per shield (so every shield can tilt on its own) -->
+  <div class="shields"></div>
+</div>
+
+<div class="wash" aria-hidden="true"></div>
+
+<header class="ui">
+    <a class="logo" href="#" aria-label="Home"><svg class="mini" viewBox="0 0 300 360" role="img" aria-label="Logo"><path d="M150 22C108 22 66 34 30 58V176C30 262 86 316 150 344C214 316 270 262 270 176V58C234 34 192 22 150 22Z" fill="none" stroke="currentColor" stroke-width="22" stroke-linejoin="round"/><path d="M92 114L121 190L150 134L179 190L208 114" fill="none" stroke="currentColor" stroke-width="24" stroke-linecap="round" stroke-linejoin="round"/><path class="star" d="M150 226C153 242 160 249 176 253C160 257 153 264 150 280C147 264 140 257 124 253C140 249 147 242 150 226Z" fill="currentColor" stroke="currentColor" stroke-width="4" stroke-linejoin="round"/></svg></a>
+    <nav>
+      <a class="pill" href="#contact">Contact us</a>
+      <a class="ul" href="tel:+0000000000">+00 0 00 00 00 00</a>
+      <a class="ul" href="#jobs">We're hiring</a>
+    </nav>
+  </header>
+
+<div class="page">
+
+<main class="hero"><div class="row">
+    <h1 class="word hello">Hello,</h1>
+    <div class="slot" aria-hidden="true">
+      <div class="slab"></div>
+      <div class="shield">
+        <svg viewBox="0 0 300 360" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="rb" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#f4f4f6"/><stop offset=".2" stop-color="#ffc08f"/><stop offset=".4" stop-color="#ff7ad9"/>
+              <stop offset=".6" stop-color="#7a8cff"/><stop offset=".8" stop-color="#6ff2ff"/><stop offset="1" stop-color="#f4f4f6"/>
+              <animateTransform attributeName="gradientTransform" type="rotate" from="0 .5 .5" to="360 .5 .5" dur="3s" repeatCount="indefinite"/>
+            </linearGradient>
+            <linearGradient id="mt" x1=".05" y1="0" x2=".95" y2="1">
+              <stop offset="0" style="stop-color:var(--mt0,#eceaf1)"/><stop offset=".22" style="stop-color:var(--mt5,#a9a5b6)"/><stop offset=".48" style="stop-color:var(--mt1,#6d6779)"/>
+              <stop offset=".72" style="stop-color:var(--mt2,#7a6ab0)"/><stop offset=".9" style="stop-color:var(--mt3,#b9b4cd)"/><stop offset="1" style="stop-color:var(--mt4,#f4f2f8)"/>
+            </linearGradient>
+            <linearGradient id="gf" x1=".1" y1="0" x2=".9" y2="1"><stop offset="0" stop-color="#fbeda8"/><stop offset=".2" stop-color="#ebc955"/><stop offset=".42" stop-color="#c3962a"/><stop offset=".55" stop-color="#a97a18"/><stop offset=".72" stop-color="#e8c459"/><stop offset=".88" stop-color="#f9e48c"/><stop offset="1" stop-color="#c89a2c"/></linearGradient>
+            <linearGradient id="hl" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".95"/><stop offset=".55" stop-color="#fff" stop-opacity=".25"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+            <linearGradient id="wg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" style="stop-color:var(--wg0,#e9e7f0)"/><stop offset=".55" style="stop-color:var(--wgm,#a39dbb)"/><stop offset="1" style="stop-color:var(--wg1,#6f609f)"/></linearGradient>
+            <!-- intro: prismatic shimmer colours of the starting bar (userSpace gradient, shimmer via SMIL) -->
+            <linearGradient id="bg" gradientUnits="userSpaceOnUse" spreadMethod="repeat" x1="14" y1="0" x2="286" y2="0">
+              <stop offset="0" stop-color="#77777e"/><stop offset=".28" stop-color="#d9d9df"/><stop offset=".52" stop-color="#8c8c94"/>
+              <stop offset=".68" stop-color="#ffb48a"/><stop offset=".78" stop-color="#7fd8ff"/><stop offset=".88" stop-color="#c9a5ff"/><stop offset="1" stop-color="#e9e9ee"/>
+              <animateTransform attributeName="gradientTransform" type="translate" from="0 0" to="-272 0" dur="1.4s" repeatCount="indefinite"/>
+            </linearGradient>
+          </defs>
+          <clipPath id="rv"><rect id="rvr" x="-60" y="-60" width="420" height="120"/></clipPath>
+          <!-- the whole shield lives in #sg: hero.js slides it up into place while the clip window (#rvr) opens downward, so only its top shows at first -->
+          <g id="sg" clip-path="url(#rv)">
+            <path class="face" d="M150 8C102 8 53.8 23.2 14 50V176C14 268 76 328 150 356C224 328 286 268 286 176V50C246.2 23.2 198 8 150 8Z"/>
+            <g class="mark-sh" transform="translate(2.5 3.5)"><path d="M86.0 96.0L108.0 96.0L126.6 163.7L150.0 100.1L173.4 163.7L192.0 96.0L214.0 96.0L190.4 182.0L158.1 182.0L150.0 159.9L141.9 182.0L109.6 182.0Z"/><path d="M150 212C153 232 164 246 183 249C164 252 153 266 150 287C147 266 136 252 117 249C136 246 147 232 150 212Z"/></g>
+            <g class="mark"><path d="M86.0 96.0L108.0 96.0L126.6 163.7L150.0 100.1L173.4 163.7L192.0 96.0L214.0 96.0L190.4 182.0L158.1 182.0L150.0 159.9L141.9 182.0L109.6 182.0Z" fill="url(#wg)"/>
+          <path d="M150 212C153 232 164 246 183 249C164 252 153 266 150 287C147 266 136 252 117 249C136 246 147 232 150 212Z" fill="url(#wg)"/></g>
+            <g class="mark-fx"><path d="M86.0 96.0L108.0 96.0L126.6 163.7L150.0 100.1L173.4 163.7L192.0 96.0L214.0 96.0L190.4 182.0L158.1 182.0L150.0 159.9L141.9 182.0L109.6 182.0Z"/><path d="M150 212C153 232 164 246 183 249C164 252 153 266 150 287C147 266 136 252 117 249C136 246 147 232 150 212Z"/></g>
+            <g class="prism">
+              <path class="rim glowp" d="M150 8C102 8 53.8 23.2 14 50V176C14 268 76 328 150 356C224 328 286 268 286 176V50C246.2 23.2 198 8 150 8Z"/>
+              <path class="rim ring" d="M150 8C102 8 53.8 23.2 14 50V176C14 268 76 328 150 356C224 328 286 268 286 176V50C246.2 23.2 198 8 150 8Z"/>
+            </g>
+            <path class="bev bev-o" d="M150 8C102 8 53.8 23.2 14 50V176C14 268 76 328 150 356C224 328 286 268 286 176V50C246.2 23.2 198 8 150 8Z"/>
+            <path class="rim metal" pathLength="1" d="M150 8C102 8 53.8 23.2 14 50V176C14 268 76 328 150 356C224 328 286 268 286 176V50C246.2 23.2 198 8 150 8Z"/>
+            <path class="bev bev-i1" transform="translate(150 182) scale(.94) translate(-150 -182)" d="M150 8C102 8 53.8 23.2 14 50V176C14 268 76 328 150 356C224 328 286 268 286 176V50C246.2 23.2 198 8 150 8Z"/>
+            <path class="bev bev-i2" transform="translate(150 182) scale(.915) translate(-150 -182)" d="M150 8C102 8 53.8 23.2 14 50V176C14 268 76 328 150 356C224 328 286 268 286 176V50C246.2 23.2 198 8 150 8Z"/>
+          </g>
+        </svg>
+      </div>
+      <div class="shield2" aria-hidden="true">
+        <svg viewBox="0 0 300 360" xmlns="http://www.w3.org/2000/svg">
+            <path class="face" d="M150 8C102 8 53.8 23.2 14 50V176C14 268 76 328 150 356C224 328 286 268 286 176V50C246.2 23.2 198 8 150 8Z"/>
+            <g class="mark-sh" transform="translate(2.5 3.5)"><path d="M86.0 96.0L108.0 96.0L126.6 163.7L150.0 100.1L173.4 163.7L192.0 96.0L214.0 96.0L190.4 182.0L158.1 182.0L150.0 159.9L141.9 182.0L109.6 182.0Z"/><path d="M150 212C153 232 164 246 183 249C164 252 153 266 150 287C147 266 136 252 117 249C136 246 147 232 150 212Z"/></g>
+            <g class="mark"><path d="M86.0 96.0L108.0 96.0L126.6 163.7L150.0 100.1L173.4 163.7L192.0 96.0L214.0 96.0L190.4 182.0L158.1 182.0L150.0 159.9L141.9 182.0L109.6 182.0Z" fill="url(#wg)"/>
+          <path d="M150 212C153 232 164 246 183 249C164 252 153 266 150 287C147 266 136 252 117 249C136 246 147 232 150 212Z" fill="url(#wg)"/></g>
+            <g class="mark-fx"><path d="M86.0 96.0L108.0 96.0L126.6 163.7L150.0 100.1L173.4 163.7L192.0 96.0L214.0 96.0L190.4 182.0L158.1 182.0L150.0 159.9L141.9 182.0L109.6 182.0Z"/><path d="M150 212C153 232 164 246 183 249C164 252 153 266 150 287C147 266 136 252 117 249C136 246 147 232 150 212Z"/></g>
+            
+            <path class="bev bev-o" d="M150 8C102 8 53.8 23.2 14 50V176C14 268 76 328 150 356C224 328 286 268 286 176V50C246.2 23.2 198 8 150 8Z"/>
+            <path class="rim metal" pathLength="1" d="M150 8C102 8 53.8 23.2 14 50V176C14 268 76 328 150 356C224 328 286 268 286 176V50C246.2 23.2 198 8 150 8Z"/>
+            <path class="bev bev-i1" transform="translate(150 182) scale(.94) translate(-150 -182)" d="M150 8C102 8 53.8 23.2 14 50V176C14 268 76 328 150 356C224 328 286 268 286 176V50C246.2 23.2 198 8 150 8Z"/>
+            <path class="bev bev-i2" transform="translate(150 182) scale(.915) translate(-150 -182)" d="M150 8C102 8 53.8 23.2 14 50V176C14 268 76 328 150 356C224 328 286 268 286 176V50C246.2 23.2 198 8 150 8Z"/>
+        </svg>
+      </div>
+    </div>
+    <h1 class="word again" aria-label="again">again.<sup>*</sup></h1></div>
+  </main>
+
+<div class="card ui"><b>NEW</b><i>×</i>We're opening a new office</div>
+
+<footer class="ui">
+    <span>~ Your tagline goes here, digital agency since 20XX.</span>
+    <span>* Welcome back, once more.</span>
+  </footer>
+
+<div class="peek" aria-hidden="true">
+    <i class="p1"></i><i class="p2"></i><i class="p3"></i><i class="p4"></i>
+  </div>
+
+</div>
+
+<div class="lang ui"><span class="on">EN</span><span>FR</span></div>
+
+<div class="dock ui" role="navigation" aria-label="Main">
+    <!-- state 1: full dock -->
+    <div class="dock-links">
+      <a href="#our-expertise">What we do</a><a class="dock-dim" href="#about">Who we are</a>
+      <a class="talk" href="#contact">Talk to us… <span class="chat"><svg width="40%" viewBox="0 0 24 24" fill="none" stroke="#000" stroke-width="2"><path d="M4 5h16v11H9l-5 4z"/></svg></span></a>
+    </div>
+    <!-- state 2: "Learn more / <section name>" pill with close button -->
+    <div class="dock-exp"><i class="dot"></i><span><small>Learn more</small><b>Our expertise</b></span></div>
+    <button class="dock-x" type="button" aria-label="Close">&times;</button>
+  </div>
+
+<section class="story" aria-label="Showreel">
+  <div class="stage">
+    <div class="panel"><video id="v" src="assets/video/showreel-cover.mp4" muted loop playsinline autoplay></video><div class="dim"></div></div>
+    <p class="say">Your brand designs digital solutions and experiences that combine <em>creativity</em>, <em>technology</em> and <em>ethical</em> commitment.</p>
+    <button class="play" type="button" aria-label="Play showreel with sound">PLAY SHOWREEL <i><svg width="16" height="16" viewBox="0 0 16 16"><path d="M4 2l10 6-10 6z" fill="#fff"/></svg></i></button>
+  </div>
+</section>
+
+<section class="expertise" id="our-expertise" aria-labelledby="exp-title">
+  <div class="left">
+    <p class="eyebrow">Our expertise</p>
+    <h2 id="exp-title">Skills to enhance your performance</h2>
+    <a class="more" href="#">Read more about our expertise</a>
+  </div>
+  <div class="right">
+    <ul class="services">
+      <li><a href="#">User Experience</a></li>
+      <li><a href="#">Creative Design</a></li>
+      <li><a href="#">Web development</a></li>
+      <li><a href="#">Extranet / intranet</a></li>
+      <li><a href="#">E-commerce</a></li>
+      <li><a href="#">Data</a></li>
+      <li><a href="#">Digital Strategy</a></li>
+    </ul>
+    <a class="dots" href="#" aria-label="See all our expertise"><i></i><i></i><i></i></a>
+  </div>
+</section>
+
+<section class="offers" id="offers" aria-label="Programs">
+  <article class="offer training">
+    <p class="eyebrow">Our academy</p>
+    <h3>The digital training and Learning Experience program.</h3>
+    <a class="cta" href="#">Discover our training offering.</a>
+  </article>
+  <article class="offer studio">
+    <p class="eyebrow">Our studio</p>
+    <h3>Powerful content to increase your visibility and brand awareness.</h3>
+    <a class="cta" href="#">Discover our content creation offering.</a>
+  </article>
+</section>
+
+<section class="approach" id="approach" aria-labelledby="ap-title">
+  <p class="eyebrow">Our approach</p>
+  <h2 class="flow" id="ap-title"><span class="w"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h17M13 5l7 7-7 7"/></svg>Meet</span><span class="w"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h17M13 5l7 7-7 7"/></svg>Listen</span><span class="w"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h17M13 5l7 7-7 7"/></svg>Question</span><span class="w"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h17M13 5l7 7-7 7"/></svg>Think</span><span class="w"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h17M13 5l7 7-7 7"/></svg>Find</span><span class="w"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h17M13 5l7 7-7 7"/></svg>Ideate</span><span class="w"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h17M13 5l7 7-7 7"/></svg>Suggest</span><span class="w"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h17M13 5l7 7-7 7"/></svg>Design</span><span class="w"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h17M13 5l7 7-7 7"/></svg>Develop</span><span class="w"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h17M13 5l7 7-7 7"/></svg>Present</span><span class="w"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h17M13 5l7 7-7 7"/></svg>Go Live</span><span class="w"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h17M13 5l7 7-7 7"/></svg>Follow</span><span class="w"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h17M13 5l7 7-7 7"/></svg><img class="thumb" src="https://www.wokine.com/_vercel/image?url=%2Fimages%2Frelease.gif&w=1536&q=100" alt="Project preview" onerror="this.onerror=null;this.src='assets/images/follow-image.png'"></span><span class="w"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h17M13 5l7 7-7 7"/></svg>Support</span><span class="w"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h17M13 5l7 7-7 7"/></svg>Nurture</span><span class="w"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12h17M13 5l7 7-7 7"/></svg>Evolve</span></h2>
+  <div class="method">
+    <p>For 20 years, your team has been creating hundreds of digital interfaces. Through these experiences, we have developed our methodology to build your project, and address all the challenges and opportunities your digital environment has to offer.</p>
+    <p>We turn your concepts into reality through careful steps-by-steps project piloting. Strongly rooted in the digital world yet deeply human oriented, that&rsquo;s people who are core to our approach. More than just a website, you are provided with a personalized journey.</p>
+    <p>So, before getting down to business, <a href="#contact">let&rsquo;s get to know each other</a>!</p>
+    <a class="more" href="#">Read more about our methodology</a>
+  </div>
+</section>
+
+<section class="work" id="work" aria-labelledby="work-title">
+  <p class="eyebrow">Our work</p>
+  <h2 id="work-title" class="marquee" aria-label="Our work"><div class="track"><div class="mq"><span>Our work<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1C12.8 7.2 16.8 11.2 23 12C16.8 12.8 12.8 16.8 12 23C11.2 16.8 7.2 12.8 1 12C7.2 11.2 11.2 7.2 12 1Z" fill="currentColor"/></svg></span><span>Our work<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1C12.8 7.2 16.8 11.2 23 12C16.8 12.8 12.8 16.8 12 23C11.2 16.8 7.2 12.8 1 12C7.2 11.2 11.2 7.2 12 1Z" fill="currentColor"/></svg></span><span>Our work<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1C12.8 7.2 16.8 11.2 23 12C16.8 12.8 12.8 16.8 12 23C11.2 16.8 7.2 12.8 1 12C7.2 11.2 11.2 7.2 12 1Z" fill="currentColor"/></svg></span><span>Our work<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1C12.8 7.2 16.8 11.2 23 12C16.8 12.8 12.8 16.8 12 23C11.2 16.8 7.2 12.8 1 12C7.2 11.2 11.2 7.2 12 1Z" fill="currentColor"/></svg></span></div><div class="mq" aria-hidden="true"><span>Our work<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1C12.8 7.2 16.8 11.2 23 12C16.8 12.8 12.8 16.8 12 23C11.2 16.8 7.2 12.8 1 12C7.2 11.2 11.2 7.2 12 1Z" fill="currentColor"/></svg></span><span>Our work<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1C12.8 7.2 16.8 11.2 23 12C16.8 12.8 12.8 16.8 12 23C11.2 16.8 7.2 12.8 1 12C7.2 11.2 11.2 7.2 12 1Z" fill="currentColor"/></svg></span><span>Our work<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1C12.8 7.2 16.8 11.2 23 12C16.8 12.8 12.8 16.8 12 23C11.2 16.8 7.2 12.8 1 12C7.2 11.2 11.2 7.2 12 1Z" fill="currentColor"/></svg></span><span>Our work<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1C12.8 7.2 16.8 11.2 23 12C16.8 12.8 12.8 16.8 12 23C11.2 16.8 7.2 12.8 1 12C7.2 11.2 11.2 7.2 12 1Z" fill="currentColor"/></svg></span></div></div></h2>
+  <div class="grid">
+    <div class="col">
+      <a class="proj" href="#"><div class="ph" style="aspect-ratio:568/505"><i style="background:url(assets/images/maison-lepage.jpg) 32% center/cover"></i></div><h3>Maison Lepage</h3><p>Craftsmanship<i></i>E-commerce</p></a>
+      <a class="proj" href="#"><div class="ph" style="aspect-ratio:568/400"><i style="background:url(assets/images/chartreuse.jpg) 45% center/cover"></i></div><h3>The Chartreuse de Neuville</h3><p>Tourism<i></i>E-commerce</p></a>
+      <a class="proj" href="#"><div class="ph" style="aspect-ratio:568/700"><i style="background:url(assets/images/divercity.jpg) 50% center/cover"></i></div><h3>Divercity</h3><p>Health<i></i>mobile application</p></a>
+      <a class="proj" href="#"><div class="ph" style="aspect-ratio:568/505"><i style="background:url(assets/images/plan-e-psy.jpg) 50% center/cover"></i></div><h3>PLAN-e-PSY</h3><p>Health<i></i>mobile application</p></a>
+    </div>
+    <div class="col">
+      <a class="proj" href="#"><div class="ph" style="aspect-ratio:568/316"><i style="background:url(assets/images/novelty.jpg) center/cover"></i></div><h3>Novelty</h3><p>Industry<i></i>Showcase site</p></a>
+      <a class="proj" href="#"><div class="ph" style="aspect-ratio:568/560"><i style="background:url(assets/images/chicoree-leroux.jpg) 55% center/cover"></i></div><h3>Chicor&eacute;e Leroux</h3><p>Food<i></i>E-commerce</p></a>
+      <a class="proj" href="#"><div class="ph" style="aspect-ratio:568/640"><i style="background:url(assets/images/oh-les-fleurs.jpg) 25% center/cover"></i></div><h3>Oh les fleurs</h3><p>Craftsmanship<i></i>E-commerce</p></a>
+    </div>
+    <div class="col">
+      <a class="proj" href="#"><div class="ph" style="aspect-ratio:568/505"><i style="background:url(assets/images/kipsta.jpg) 58% center/cover"></i></div><h3>Kipsta Traxium</h3><p>Sport<i></i>Showcase site</p></a>
+      <a class="proj" href="#"><div class="ph" style="aspect-ratio:568/420"><i style="background:url(assets/images/artfx.jpg) 33% center/cover"></i></div><h3>ARTFX</h3><p>School<i></i>Showcase site</p></a>
+      <a class="proj" href="#"><div class="ph" style="aspect-ratio:568/690"><i style="background:url(assets/images/lattice-medical.jpg) 50% center/cover"></i></div><h3>Lattice Medical</h3><p>Health<i></i>Showcase site</p></a>
+    </div>
+  </div>
+  <a class="awards" href="#">All our awards</a>
+</section>
+
+<section class="awards-sec" id="awards" aria-labelledby="aw-title">
+  <img class="crown" src="assets/images/crown.png" alt="" aria-hidden="true">
+  <div class="aw-text">
+    <p class="eyebrow">Awards</p>
+    <h2 class="statement" id="aw-title">Over the years, we&rsquo;ve been awarded with more than <span class="circ">thirty distinctions.<svg viewBox="0 0 600 120" preserveAspectRatio="none" aria-hidden="true"><defs><filter id="pencil" x="-5%" y="-20%" width="110%" height="140%"><feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="2" seed="4" result="n"/><feDisplacementMap in="SourceGraphic" in2="n" scale="2.6" xChannelSelector="R" yChannelSelector="G"/></filter></defs><g filter="url(#pencil)"><path pathLength="1" d="M105 28 C240 14 440 12 556 30 C604 40 600 64 556 76 C440 102 220 108 88 98 C20 92 8 62 48 44 C100 24 180 20 260 20"/><path class="g" pathLength="1" d="M105 28 C240 14 440 12 556 30 C604 40 600 64 556 76 C440 102 220 108 88 98 C20 92 8 62 48 44 C100 24 180 20 260 20" transform="translate(1.2 1.6)"/></g></svg></span> These are pieces of evidence that we give our very best to every project.</h2>
+    <ul class="aw"><li>Awwwards<small data-from="10" data-to="27">x27</small></li><li>CSSDA<small data-from="10" data-to="17">x17</small></li><li>FWA<small>x1</small></li></ul>
+    <a class="see" href="#">See all distinctions</a>
+  </div>
+</section>
+
+<section class="trust" id="trust" aria-labelledby="trust-title">
+  <p class="eyebrow" id="trust-title">They trust us</p>
+  <ul class="quotes">
+    <li><div class="logo-wm w-ker" role="img" aria-label="Kerialis"><i>K</i>KERIALIS</div><p>Our agency has been the digital partner of Kerialis for more than 5 years. We&rsquo;ve been namely helping them to digitalize their processes, set up online sales tunnels, increase their conversion rate, etc.</p><a href="#">Learn more</a></li>
+    <li><div class="logo-wm w-met" role="img" aria-label="Metarom">Metarom<small>AR&Ocirc;MES &amp; CARAMELS</small></div><p>For more than 3 years, our agency has been handling the digital transformation of the Metarom group for both internal and external communication tools: editorial charter, new web-site, extranet, etc.</p><a href="#">Learn more</a></li>
+    <li><div class="logo-wm w-art" role="img" aria-label="ARTFX">ARTFX<small>SCHOOLS OF DIGITAL ARTS</small></div><p>ARTFX and &eacute;cole 24 have been trusting our agency for over 4 years. We have rebranded their graphic identity and provided them with brand new websites and communication tools.</p><a href="#">Learn more</a></li>
+    <li><div class="logo-wm w-acc" role="img" aria-label="Accro">Accro</div><p>Since their first website launch 3 years ago, our agency has been supporting ACCRO by producing their website presenting the brand and its range of products, as well as regularly reporting on them and training them on the not-to-be-missed key digital innovations in their industry.</p><a href="#">Learn more</a></li>
+  </ul>
+</section>
+
+<section class="inside" id="inside" aria-label="Inside us">
+  <div class="bgrows" aria-hidden="true"><div class="bgrow"><span>Inside us<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1C12.8 7.2 16.8 11.2 23 12C16.8 12.8 12.8 16.8 12 23C11.2 16.8 7.2 12.8 1 12C7.2 11.2 11.2 7.2 12 1Z" fill="currentColor"/></svg></span></span></span></span></span><span>Inside us<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1C12.8 7.2 16.8 11.2 23 12C16.8 12.8 12.8 16.8 12 23C11.2 16.8 7.2 12.8 1 12C7.2 11.2 11.2 7.2 12 1Z" fill="currentColor"/></svg></span></span></span></span></span></div><div class="bgrow"><span>Inside us<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1C12.8 7.2 16.8 11.2 23 12C16.8 12.8 12.8 16.8 12 23C11.2 16.8 7.2 12.8 1 12C7.2 11.2 11.2 7.2 12 1Z" fill="currentColor"/></svg></span></span></span></span></span><span>Inside us<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1C12.8 7.2 16.8 11.2 23 12C16.8 12.8 12.8 16.8 12 23C11.2 16.8 7.2 12.8 1 12C7.2 11.2 11.2 7.2 12 1Z" fill="currentColor"/></svg></span></span></span></span></span></div><div class="bgrow"><span>Inside us<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1C12.8 7.2 16.8 11.2 23 12C16.8 12.8 12.8 16.8 12 23C11.2 16.8 7.2 12.8 1 12C7.2 11.2 11.2 7.2 12 1Z" fill="currentColor"/></svg></span></span></span></span></span><span>Inside us<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1C12.8 7.2 16.8 11.2 23 12C16.8 12.8 12.8 16.8 12 23C11.2 16.8 7.2 12.8 1 12C7.2 11.2 11.2 7.2 12 1Z" fill="currentColor"/></svg></span></span></span></span></span></div><div class="bgrow"><span>Inside us<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1C12.8 7.2 16.8 11.2 23 12C16.8 12.8 12.8 16.8 12 23C11.2 16.8 7.2 12.8 1 12C7.2 11.2 11.2 7.2 12 1Z" fill="currentColor"/></svg></span></span></span></span></span><span>Inside us<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1C12.8 7.2 16.8 11.2 23 12C16.8 12.8 12.8 16.8 12 23C11.2 16.8 7.2 12.8 1 12C7.2 11.2 11.2 7.2 12 1Z" fill="currentColor"/></svg></span></span></span></span></span></div><div class="bgrow"><span>Inside us<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1C12.8 7.2 16.8 11.2 23 12C16.8 12.8 12.8 16.8 12 23C11.2 16.8 7.2 12.8 1 12C7.2 11.2 11.2 7.2 12 1Z" fill="currentColor"/></svg></span></span></span></span></span><span>Inside us<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1C12.8 7.2 16.8 11.2 23 12C16.8 12.8 12.8 16.8 12 23C11.2 16.8 7.2 12.8 1 12C7.2 11.2 11.2 7.2 12 1Z" fill="currentColor"/></svg></span></span></span></span></span></div><div class="bgrow"><span>Inside us<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1C12.8 7.2 16.8 11.2 23 12C16.8 12.8 12.8 16.8 12 23C11.2 16.8 7.2 12.8 1 12C7.2 11.2 11.2 7.2 12 1Z" fill="currentColor"/></svg></span></span></span></span></span><span>Inside us<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 1C12.8 7.2 16.8 11.2 23 12C16.8 12.8 12.8 16.8 12 23C11.2 16.8 7.2 12.8 1 12C7.2 11.2 11.2 7.2 12 1Z" fill="currentColor"/></svg></span></span></span></span></span></div></div>
+  <div class="duo">
+    <article class="panel2 studio2">
+      <p class="eyebrow">Startup studio</p>
+      <p class="big">We also provide start-ups <span class="circ">with our skills and<svg viewBox="0 0 600 120" preserveAspectRatio="none" aria-hidden="true"><g filter="url(#pencil)"><path d="M105 28 C240 14 440 12 556 30 C604 40 600 64 556 76 C440 102 220 108 88 98 C20 92 8 62 48 44 C100 24 180 20 260 20"/></g></svg></span> savoir-faire for their development.</p>
+      <a class="go" href="#">Join our start-up studio</a>
+    </article>
+    <article class="panel2 extra">
+      <div class="ghost" aria-hidden="true"><span style="left:24%;top:12%">meet</span><span style="left:10%;top:38%">&times; focus</span><span style="left:24%;top:62%">&asymp; coffee</span><span style="left:46%;top:84%">&lbrace; talk</span><span style="left:62%;top:2%">&oslash;</span></div>
+      <p class="eyebrow">Extranet</p>
+      <p class="big">Our extranet is our customer-dedicated space where one can find their invoices, pending quotes, training courses and tools (SEO, Google Analytics, ChatGPT, etc.). It gives an overview of all the important data concerning their project.</p>
+      <a class="go" href="#">Log in to your space</a>
+      <div class="ui-card" aria-hidden="true"><div class="ui-top"><svg viewBox="0 0 300 360" aria-hidden="true"><path d="M150 14C108 28 62 34 20 34V176C20 266 80 324 150 350C220 324 280 266 280 176V34C238 34 192 28 150 14Z" fill="none" stroke="currentColor" stroke-width="22" stroke-linejoin="round"/><path d="M86 112H118L136 190L150 142L164 190L182 112H214L180 232H156L150 208L144 232H120Z" fill="currentColor"/><path d="M150 256C154 270 160 276 174 280C160 284 154 290 150 304C146 290 140 284 126 280C140 276 146 270 150 256Z" fill="currentColor"/></svg>extranet<em>beta</em></div><ul><li class="on"><i></i>Home</li><li><i></i>Projects</li><li><i></i>Tools</li><li><i></i>Courses</li><li><i></i>Subscriptions</li><li><i></i>Tracking</li></ul></div>
+    </article>
+  </div>
+</section>
+
+<footer class="footer" id="footer">
+  <div class="f-left">
+    <div class="f-shield" aria-hidden="true"><svg viewBox="0 0 300 360" aria-hidden="true"><path d="M150 14C108 28 62 34 20 34V176C20 266 80 324 150 350C220 324 280 266 280 176V34C238 34 192 28 150 14Z" fill="none" stroke="currentColor" stroke-width="22" stroke-linejoin="round"/><path d="M86 112H118L136 190L150 142L164 190L182 112H214L180 232H156L150 208L144 232H120Z" fill="currentColor"/><path d="M150 256C154 270 160 276 174 280C160 284 154 290 150 304C146 290 140 284 126 280C140 276 146 270 150 256Z" fill="currentColor"/></svg></div>
+    <p class="f-state">Your brand designs digital solutions and experiences that combine creativity, technology and ethical commitment.</p>
+    <div class="flang" aria-hidden="true"><span>FR</span><span class="on">EN</span></div>
+    <div class="f-play"><div class="f-card"><video id="fv" muted loop playsinline autoplay></video></div><button class="f-btn" type="button" aria-label="Play showreel with sound">PLAY SHOWREEL <i><svg width="16" height="16" viewBox="0 0 16 16"><path d="M4 2l10 6-10 6z" fill="#161616"/></svg></i></button></div>
+  </div>
+  <div class="f-right">
+    <div class="cols">
+      <div><h3>Learn more</h3><ul class="lg"><li><a href="#approach">Our approach</a></li><li><a href="#our-expertise">Our expertise</a></li><li><a href="#">Our CSR approach</a></li><li><a href="#">We are hiring</a></li></ul></div>
+      <div><h3>Go further</h3><ul class="ul"><li><a href="#">&#8627; 1 Pourcent</a></li></ul></div>
+      <div><h3>Manage your project</h3><ul class="ul"><li><a href="#"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 018 0v3"/></svg>Extranet access</a></li></ul></div>
+    </div>
+    <div class="news"><h3>Newsletter</h3><input type="email" placeholder="Email" aria-label="Email for the newsletter"></div>
+    <div class="addr">
+      <div><h3>Agency one</h3><p>00 Example Street<br>00000 City<br>Country</p><a href="tel:+0000000000">T +00 0 00 00 00 00</a></div>
+      <div><h3>Agency two</h3><a href="#">Discover our second agency</a></div>
+      <div><h3>Follow us</h3><div class="social"><a href="#" aria-label="X"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4l16 16M20 4L4 20"/></svg></a><a href="#" aria-label="Facebook">f</a><a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></svg></a><a href="#" aria-label="LinkedIn">in</a><a href="#" aria-label="Behance">B&emacr;</a></div></div>
+    </div>
+  </div>
+  <div class="legal"><span>&copy;2026 Your brand</span><a href="#">Legal notice</a><a href="#">Privacy Policy</a><a href="#">Cookies</a></div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="components/background/background.js"></script>
+<script src="components/hero/hero.js"></script>
+<script src="components/falling-shields/falling-shields.js"></script>
+<script src="components/approach/approach.js"></script>
+<script src="components/awards/awards.js"></script>
+<script src="components/inside/inside.js"></script>
+</body>
+</html>

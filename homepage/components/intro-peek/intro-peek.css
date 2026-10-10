@@ -1,0 +1,14 @@
+/* INTRO PEEK: the coloured strips that rise from the bottom edge of the first screen during the gold intro
+   (black -> dark teal + red -> sand). Only used in the "gold swing" intro; delete "intro-peek" from build.py to remove. */
+.peek{display:none}
+html[data-intro="gold"] .peek{display:block;position:absolute;left:clamp(8px,.8vw,16px);right:clamp(8px,.8vw,16px);bottom:0;height:clamp(18px,2.4vw,40px);z-index:0;pointer-events:none;overflow:hidden;border-radius:10px 10px 0 0;
+  animation:peekUp .7s cubic-bezier(.2,.8,.2,1) .35s backwards}
+.peek i{position:absolute;top:0;bottom:0;display:block}
+.peek .p1{left:0;right:0;background:#000;animation:peekOut .1s linear 1.35s forwards}              /* black bar, first thing to appear */
+.peek .p2{left:0;width:16%;background:#0f2228;border-radius:0 0 100% 0/0 0 100% 0;opacity:0;animation:peekIn .5s ease 1.3s forwards}
+.peek .p3{left:6%;right:18%;background:#cc1f2d;opacity:0;animation:peekIn .5s ease 1.4s forwards}
+.peek .p4{right:0;width:18%;background:#dea05a;opacity:0;animation:peekIn .5s ease 1.7s forwards}
+@keyframes peekUp{from{transform:translateY(100%)}}
+@keyframes peekOut{to{opacity:0}}
+@keyframes peekIn{to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.peek,.peek i{animation:none!important}.peek .p1{opacity:0}.peek .p2,.peek .p3,.peek .p4{opacity:1}}

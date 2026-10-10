@@ -1,0 +1,4 @@
+/* TAGLINE BAR: the two small lines at the bottom of the hero.
+   Note: this targets the bare <footer> tag; the big site footer overrides it in components/footer. */
+footer{display:flex;justify-content:space-between;gap:16px;font-size:clamp(12px,1vw,15px);position:relative}
+footer span:last-child{text-align:right}
